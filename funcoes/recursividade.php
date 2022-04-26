@@ -1,29 +1,28 @@
 <div class="titulo">Recursividade</div>
 
 <?php
-function somaUmAte($numero) {
+
+
+
+function somaUmate($recebenumero){
     $soma = 0;
-    for($i = 1; $i <= $numero; $i++) {
+    for($i = 1; $i <= $recebenumero; $i++){
         $soma += $i;
     }
     return $soma;
 }
+echo somaUmate(4) . "<br>" ;  
+echo recursividadeSomaumate(4). "<br>" ;
+echo recursividadeSomaumateECOM(4);
 
-echo somaUmAte(150) . '<br>';
 
-function somaRecursivaUmAte($numero) {
-    // Condição de Parada!!!!
-    if($numero === 1) {
+function recursividadeSomaumate($recebenumero){
+    if($recebenumero === 1){
         return 1;
-    } else {
-        return $numero + somaRecursivaUmAte($numero - 1);
     }
+    return $recebenumero + recursividadeSomaumate($recebenumero - 1);
+};
+
+function recursividadeSomaumateECOM($recebenumero){
+    return $recebenumero === 1 ? 1 : $recebenumero + recursividadeSomaumateECOM($recebenumero - 1);
 }
-
-echo somaRecursivaUmAte(150) . '<br>';
-
-function somaRecursivaEconomica($numero) {
-    return $numero === 1 ? 1 : $numero + somaRecursivaEconomica($numero - 1);
-}
-
-echo somaRecursivaEconomica(150) . '<br>';
