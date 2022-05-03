@@ -14,6 +14,31 @@
     <main class="principal">
         <div class="conteudo">
             <nav class="modulos">
+                <div class="modulo roxo-escuro">
+                    <h3>9. Includes</h3>
+                    <ul>
+                        <li>
+                            <a href="exercicio.php?dir=includes&file=include">
+                                Include
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=includes&file=include_funcao">
+                                Include Função
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=includes&file=include_require">
+                                Include x Require
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=includes&file=require_return">
+                            Require & Return
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="modulo azul-escuro">
                     <h3>8. Paradigma O.O.</h3>
                     <ul>
@@ -80,6 +105,11 @@
                         <li>
                             <a href="exercicio.php?dir=classes_objetos&file=magic_methods">
                                 Metodos Magicos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="exercicio.php?dir=classes_objetos&file=polimorfismo">
+                                Polimorfismo
                             </a>
                         </li>
                     </ul>
