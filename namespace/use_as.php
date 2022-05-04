@@ -23,4 +23,32 @@ class Classe {
 }
 
 
-echo Nome\Bem\Grande\constante . '<br>';
+echo \Nome\Bem\Grande\constante . '<br>';
+
+use  const Nome\Bem\Grande\constante;
+
+echo constante . '<br>';
+
+
+use Nome\Bem\Grande as ctx;
+
+echo soma(1, 2) . '<br>';
+echo ctx\soma(1, 2) . '<br>';
+
+use function Nome\Bem\Grande\soma as somaReal;
+echo somaReal(1, 2) . '<br>';
+
+
+
+$a = new Classe();
+$a->func();
+
+$b = new \Nome\Bem\Grande\Classe();
+$b->func();
+
+$c = new ctx\Classe();
+$c->func();
+
+use \Nome\Bem\Grande\Classe as D;
+$d = new D();
+$d->func();
