@@ -2,11 +2,15 @@
 
 <?php
 ini_set('display_errors', 1);
+// echo 4 / 0 . '<br>';
+
+
+// COMANDO PARA PARAR DE APARECER ERRO
+error_reporting(E_ERROR);
 echo 4 / 0 . '<br>';
 
-// error_reporting(E_ERROR);
-// // echo 4 / 0 . '<br>';
 
+// COMANDO Q VOLTA A APARECER TODOS OS ERROS
 // error_reporting(E_ALL);
 // // echo 4 / 0 . '<br>';
 
