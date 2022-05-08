@@ -163,3 +163,15 @@ body {
 .navegacao > a.verde { background-color: #4CAF50; }
 .navegacao > a.vermelho { background-color: #F44336; }
 .navegacao > a.amarelo { background-color: #870bec; }
+.navegacao > a.verde { background-color: #4CAF50; }
+.navegacao > a.vermelho { background-color: #F44336; }
+.navegacao > a.amarelo { background-color: #870bec; }
+
+span.usuario {
+    flex-grow: 1;
+    justify-self: flex-start;
+    color: #EEE;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}

@@ -1,7 +1,45 @@
 <?php
 session_start();
-$email = $_SESSION['email'];
-$senha = $_SESSION['senha'];
+error_reporting(E_ERROR);
+
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+
+
+if($_POST['email']){
+    $usuarios = [
+        [
+            "nome" => "Davi",
+            "email" => "davimoura@gmail.com",
+            "senha" => "123456",
+        ],
+        [
+            "nome" => "Outro",
+            "email" => "outro@gmail.com",
+            "senha" => "123123",
+        ],
+    ];
+
+    foreach($usuarios as $user){
+        $emailValido = $email === $user['email'];
+        $senhaValida = $senha === $user['senha'];
+
+        if($emailValido and $senhaValida){
+            $_SESSION['erros'] = null;
+            $_SESSION['usuario'] = $user['nome'];
+
+            $exp = time() + 60 * 60 * 24 * 30;
+            setcookie('usuario', $user['nome'], $exp);
+            header('Location: index.php');
+        }
+
+        if(!$_SESSION['usuario']){
+            $_SESSION['erros'] = ['Usuario/Senha inválida!'];
+        }
+    }
+}
+
+
 ?>
 
 
